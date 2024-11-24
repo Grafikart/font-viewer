@@ -1,3 +1,30 @@
+import type { FontMetrics } from "@capsizecss/core";
+
+export const customFonts = [
+  {
+    name: "No Descent",
+    metrics: {
+      capHeight: 2048,
+      ascent: 2048,
+      descent: 0,
+      lineGap: 0,
+      unitsPerEm: 2048,
+      xHeight: 1024,
+    } as FontMetrics,
+  },
+  {
+    name: "No Descent P",
+    metrics: {
+      capHeight: 2048,
+      ascent: 2048,
+      descent: -500,
+      lineGap: 0,
+      unitsPerEm: 2048,
+      xHeight: 1024,
+    } as FontMetrics,
+  },
+];
+
 export const fonts = [
   "ABeeZee",
   "ADLaM Display",
@@ -1752,4 +1779,5 @@ export const fonts = [
   "Zhi Mang Xing",
   "Zilla Slab",
   "Zilla Slab Highlight",
+  ...customFonts.map((c) => c.name),
 ];
